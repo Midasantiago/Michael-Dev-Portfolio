@@ -103,3 +103,59 @@ body {
   margin: 2px;
   box-sizing: border-box;
 }
+
+.project-section {
+  background-color: var(--secondary-bg-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .project-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.project {
+  background-color: var(--bg-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.project:hover {
+  border-color: white;
+  box-shadow: 0 0 10px var(--border-color);
+  transform: rotate(-10deg) scale(1.1);
+  animation: wave 0.5s infinite alternate;
+}
+
+.project-img {
+  width: 500px;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.project-title {
+  border-bottom: var(--border-width) solid var(--border-color);
+  -webkit-text-stroke: 0.5px var(--border-color);
+}
+
+.footer {
+  background-color: var(--secondary-bg-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+}
