@@ -6,6 +6,7 @@ import './index.css'
 import App from './App.jsx'
 
 import Homepage from './pages/Homepage.jsx';
+import Project from './pages/Project.jsx';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Homepage />
+      },
+      {
+        path: '/project/:id',
+        element: <Project />
       }
     ]
   }
