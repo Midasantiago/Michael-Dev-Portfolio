@@ -45,8 +45,8 @@ const Project = () => {
                 </div>
                 <div className="bottom-section flex flex-col md:flex-row gap-8 items-center md:items-start">
                     <div className="tech-used p-4 m-4">
-                        <h1 className="text-xl">Technologies Used:</h1>
-                        <ul className="list-disc pl-5">
+                        <h1 className="text-xl mb-4">Technologies Used:</h1>
+                        <ul className="list-disc grid grid-cols-2 gap-x-6 gap-y-2 pl-5">
                             {(project.technologies || []).map((tech, index) => (
                                 <li key={`${project.id}-${index}`} className="text-xl">{tech}</li>
                             ))}

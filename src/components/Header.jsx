@@ -2,6 +2,7 @@ import React from "react";
 import GitHubLogo from "../assets/github-6980894_640.webp";
 import LinkedInLogo from "../assets/LinkedIn_logo_initials.png.webp";
 import { useNavigate } from "react-router-dom";
+import SkillSet from "./SkillSet";
 
 
 const Header = () => {
@@ -34,11 +35,8 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="skill-set-box w-1/3 p-4">
-                <h2 className="text-xl pb-2">SKILL SET</h2>
-                <div className="skill-set-interior">
-                    <p>Insert Skill Set Here</p>
-                </div>
+            <div className="skill-set-box w-1/2">
+                <SkillSet />
             </div>
         </div>
     )
