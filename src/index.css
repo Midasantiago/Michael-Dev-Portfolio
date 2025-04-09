@@ -251,3 +251,32 @@ body {
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--border-radius);
 }
+
+@keyframes glitch {
+  0% {
+    transform: skew(0deg);
+    filter: brightness(1.5) contrast(1.2);
+  }
+  20% {
+    transform: skew(-5deg);
+  }
+  40% {
+    transform: skew(5deg);
+    filter: brightness(1.2);
+  }
+  60% {
+    transform: skew(-3deg);
+    filter: brightness(1.6);
+  }
+  80% {
+    transform: skew(2deg);
+  }
+  100% {
+    transform: skew(0deg);
+    filter: brightness(1);
+  }
+}
+
+.glitch-animate {
+  animation: glitch 0.4s ease-in-out;
+}

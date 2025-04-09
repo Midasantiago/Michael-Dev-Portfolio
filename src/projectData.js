@@ -1,12 +1,13 @@
 import eldenRingImage from "./assets/er-build-manager.png"
+import eldenRingGif from "./assets/Er-Gif.gif"
 
 const projects = [
     {
         id: "elden-ring-build-manager",
         title: "Elden Ring Build Manager",
-        description: "Track and compare multiple character stats and equipment.",
-        image: eldenRingImage,
-        technologies: ["React", "Node.js", "MongoDB", "Tailwind"],
+        description: "An interactive web application that allows users to track and compare multiple Elden Ring character builds, including stats, equipment, and scaling. The tool helps players optimize their builds based on in-game requirements.",
+        image: eldenRingGif,
+        technologies: ["React", "Node.js", "MongoDB", "GraphQL", "Tailwind CSS", "Express", "JSON Web Token", "BCrypt"],
         link: "/projects/elden-ring-build-manager",
         githubLink: "https://github.com/Midasantiago/ER-Stat-Checker",
         deployedLink: "https://er-stat-checker.onrender.com",
