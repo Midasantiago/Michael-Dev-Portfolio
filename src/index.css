@@ -21,10 +21,6 @@ body {
   
 }
 
-span {
-  -webkit-text-stroke: 0.5px var(--border-color);
-}
-
 .hero {
   background-image: url(./assets/coder-at-night.webp);
   background-size: cover;
@@ -201,15 +197,53 @@ span {
   justify-content: center;
 }
 
-.link {
+.link,
+.contact-link {
   font-size: 18px;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
+  -webkit-text-stroke: 0.5px transparent;
 }
 
-.link:hover {
+.contact-link {
+  display: inline-block;
+
+}
+
+.about-me,
+.contact-info {
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.resume-down {
+  transition: all 0.3s ease-in-out;
+}
+
+.link:hover,
+.resume-down:hover,
+.contact-link:hover {
   -webkit-text-stroke: 0.5px var(--border-color);
   transform: scale(1.05);
+}
+
+.contact {
+  background-color: var(--secondary-bg-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+.contact-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bio-sec,
+.contact-sheet,
+.resume {
+  background-color: var(--bg-color);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--border-radius);
 }
 
 .footer {

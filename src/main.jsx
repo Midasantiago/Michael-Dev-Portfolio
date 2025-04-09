@@ -7,6 +7,7 @@ import App from './App.jsx'
 
 import Homepage from './pages/Homepage.jsx';
 import Project from './pages/Project.jsx';
+import Contact from './pages/Contact.jsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/project/:id',
         element: <Project />
+      },
+      {
+        path: '/contact',
+        element: <Contact />
       }
     ]
   }
