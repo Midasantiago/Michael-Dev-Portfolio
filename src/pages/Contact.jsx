@@ -66,8 +66,8 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="resume w-1/3 p-4 m-4 ">
-                    <a className="resume-down" href={Resume} download='NEWRESUME_3_17_25.pdf'>
-                        Download My Resume Here!
+                    <a className="resume-down" href={Resume} target="_blank" rel="noopener noreferrer">
+                        View And Download My Resume Here!
                     </a>
                 </div>
             </div>
