@@ -34,8 +34,8 @@ const Project = () => {
             animate="animate"
             exit="exit">
             <div className=" project-highlight flex flex-col md:flex-row gap-4 justify-center items-center m-4 p-4">
-                <div className="flex flex gap-4 flex-col md:flex-row items-center md:items-start gap-4 justify-center">
-                    <div className=" side-info p-4 m-4">
+                <div className="flex gap-4 flex-col md:flex-row items-center md:items-start gap-4 justify-center">
+                    <div className="w-1/3 side-info p-4 m-4">
                         <h1 className=" project-title text-3xl">{project.title || "Coming Soon"}</h1>
                         <p className="pt-4 text-xl">{project.description || "Coming Soon"}</p>
                     </div>

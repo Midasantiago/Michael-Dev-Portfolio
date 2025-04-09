@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import Resume from "../assets/NEWRESUME_3_17_25.pdf";
 
 const glitchFlash = {
@@ -28,21 +28,15 @@ const glitchFlash = {
     },
   };
 
-const pageVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
-};
-
 const Contact = () => {
     return (
         <motion.div
-            className="p-4"
+            className="relative glitch-animate p-4"
             variants={glitchFlash}
             initial="initial"
             animate="animate"
             exit="exit">
-            <div className=" contact m-4 p-4">
+            <div className="contact m-4 p-4">
                 <div className="contact-top flex gap-4 flex-col md:flex-row items-center md:items-start">
                     <div className="bio-sec max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
                         <h1 className=" about-me text-2xl mb-4">About Me</h1>
