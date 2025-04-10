@@ -1,34 +1,49 @@
 import React from "react";
+import ReactGA from "react-ga4";
 import { animate, motion } from "framer-motion";
 import Resume from "../assets/NEWRESUME_3_17_25.pdf";
 
 const glitchFlash = {
     initial: {
-      opacity: 0,
-      scale: 0.98,
-      filter: "brightness(1.5)",
+        opacity: 0,
+        scale: 0.98,
+        filter: "brightness(1.5)",
     },
     animate: {
-      opacity: 1,
-      scale: 1,
-      filter: "brightness(1)",
-      transition: {
-        duration: 0.4,
-        ease: "easeOut",
-      },
+        opacity: 1,
+        scale: 1,
+        filter: "brightness(1)",
+        transition: {
+            duration: 0.4,
+            ease: "easeOut",
+        },
     },
     exit: {
-      opacity: 0,
-      scale: 1.02,
-      filter: "brightness(1.2)",
-      transition: {
-        duration: 0.3,
-        ease: "easeIn",
-      },
+        opacity: 0,
+        scale: 1.02,
+        filter: "brightness(1.2)",
+        transition: {
+            duration: 0.3,
+            ease: "easeIn",
+        },
     },
-  };
+};
 
 const Contact = () => {
+
+    const handleResumeClick = (event) => {
+        event.preventDefault();
+
+        ReactGA.event({
+            category: "User",
+            action: "Clicked Resume Button",
+        });
+
+        setTimeout(() => {
+            window.open(Resume, "_blank"); 
+        }, 300); 
+    };
+
     return (
         <motion.div
             className="relative glitch-animate p-4"
@@ -66,7 +81,7 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="resume w-1/3 p-4 m-4 ">
-                    <a className="resume-down" href={Resume} target="_blank" rel="noopener noreferrer">
+                    <a className="resume-down" href="#" onClick={handleResumeClick}>
                         View And Download My Resume Here!
                     </a>
                 </div>
