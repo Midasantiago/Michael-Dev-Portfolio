@@ -11,7 +11,7 @@ const Header = () => {
 
     return (
         <div className="flex flex-col md:flex-row gap-10">
-            <div className="hero w-full md:w-2/3 p-4">
+            <div className="hero w-full md:w-2/3 p-4" aria-label="Michael Santiago, Full-Stack MERN Developer, Sitting at desk.">
                 <div className="name-role">
                     <h1 className="text-3xl">Michael Santiago</h1>
                     <h1 className="text-2xl">Web Developer</h1>
@@ -30,8 +30,8 @@ const Header = () => {
                 </div>
                 <nav>
                     <ul className="flex gap-4 pt-4">
-                        <li onClick={() => navigate('/')} className="nav-button">Projects</li>
-                        <li onClick={() => navigate('/contact')} className="nav-button">Contact</li>
+                        <li onClick={() => navigate('/')} className="nav-button"><a href="#project-section">Projects</a></li>
+                        <li onClick={() => navigate('/contact')} className="nav-button"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
             </div>
