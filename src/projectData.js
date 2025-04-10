@@ -14,7 +14,7 @@ const projects = [
     },
     {
         id: "zombies-guide",
-        title: "Call of Duty Zombies Guide",
+        title: "Call of Duty Zombies Guide | Coming Soon",
         description: "Interactive guide for map details and completing Easter Eggs.",
         image: "",
         technologies: ["React", "Redux", "Firebase"],
@@ -22,7 +22,7 @@ const projects = [
     },
     {
         id: "terraria-class-progression",
-        title: " Terraria Class Progression",
+        title: " Terraria Class Progression | Coming Soon",
         description: "Track gear for current world progression per class",
     }
 ];

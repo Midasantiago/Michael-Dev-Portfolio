@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import placeholderImg from "../assets/image-coming-soon-placeholder.webp"
@@ -33,7 +34,11 @@ const Project = () => {
             initial="initial"
             animate="animate"
             exit="exit">
-            <div className=" project-highlight flex flex-col md:flex-row gap-4 justify-center items-center m-4 p-4">
+            <Helmet>
+                <title>{project.title} | Michael Santiago</title>
+                <meta name="description" content={project.description}/>
+            </Helmet>
+            <div id="project-highlight" className=" project-highlight flex flex-col md:flex-row gap-4 justify-center items-center m-4 p-4">
                 <div className="flex gap-4 flex-col md:flex-row items-center md:items-start gap-4 justify-center">
                     <div className="w-1/3 side-info p-4 m-4">
                         <h1 className=" project-title text-3xl">{project.title || "Coming Soon"}</h1>

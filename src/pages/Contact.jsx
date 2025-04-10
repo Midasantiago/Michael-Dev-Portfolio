@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import ReactGA from "react-ga4";
 import { animate, motion } from "framer-motion";
 import Resume from "../assets/NEWRESUME_3_17_25.pdf";
@@ -40,8 +41,8 @@ const Contact = () => {
         });
 
         setTimeout(() => {
-            window.open(Resume, "_blank"); 
-        }, 300); 
+            window.open(Resume, "_blank", "noopener, noreferrer");
+        }, 300);
     };
 
     return (
@@ -51,7 +52,11 @@ const Contact = () => {
             initial="initial"
             animate="animate"
             exit="exit">
-            <div className="contact m-4 p-4">
+            <Helmet>
+                <title>Michael Santiago | Full-Stack Web Devloper | Contact/About</title>
+                <meta name="description" content="Michael Santiago is a full-stack web developer specializing in MERN stack applications. Get to know the developer and contact him for collaboration, hiring, or feedback on his work." />
+            </Helmet>
+            <div id="contact" className="contact m-4 p-4">
                 <div className="contact-top flex gap-4 flex-col md:flex-row items-center md:items-start">
                     <div className="bio-sec max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
                         <h1 className=" about-me text-2xl mb-4">About Me</h1>
@@ -59,7 +64,8 @@ const Contact = () => {
                             I'm a full-stack web developer focused on building clean, functional apps using the MERN stack.
                             Since starting my journey in late 2023, I've been passionate about solving real-world problems with responsive design,
                             dynamic interfaces, and clean code. Whether it's crafting interactive tools like my Elden Ring Stat Tracker or learning new technologies like Redux,
-                            I'm always looking to grow and create meaningful digital experiences.
+                            I'm always looking to grow and create meaningful digital experiences. I'm open to internship & full-time opportunities where I can contribute to impactful projects while learning from experienced developers.
+                            Let's connect! Feel free to reach out if you're hiring, collaborating, or just want to chat about web development.
                         </p>
                     </div>
                     <div className="contact-sheet max-w-xl mx-auto p-6 bg-white shadow-lg rounded-lg">
@@ -81,9 +87,9 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="resume w-1/3 p-4 m-4 ">
-                    <a className="resume-down" href="#" onClick={handleResumeClick}>
-                        View And Download My Resume Here!
-                    </a>
+                    <button className="resume-down" onClick={handleResumeClick} aria-label="View and download my resume in PDF format">
+                        View And Download My Resume!
+                    </button>
                 </div>
             </div>
         </motion.div>
