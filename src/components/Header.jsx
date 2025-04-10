@@ -10,8 +10,8 @@ const Header = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="flex gap-10">
-            <div className="hero w-2/3 p-4">
+        <div className="flex flex-col md:flex-row gap-10">
+            <div className="hero w-full md:w-2/3 p-4">
                 <div className="name-role">
                     <h1 className="text-3xl">Michael Santiago</h1>
                     <h1 className="text-2xl">Web Developer</h1>
@@ -35,7 +35,7 @@ const Header = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="skill-set-box w-1/2">
+            <div className="skill-set-box w-full md:w-1/2">
                 <SkillSet />
             </div>
         </div>
