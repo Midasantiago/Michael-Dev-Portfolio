@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga4";
 import { animate, motion } from "framer-motion";
-import Resume from "../assets/NEWRESUME_3_17_25.pdf";
+import Resume from "../assets/Michael_Santiago_Resume_WebDeveloper.pdf";
 
 const glitchFlash = {
     initial: {
